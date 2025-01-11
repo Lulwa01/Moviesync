@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Movies</title>
+</head>
+<body>
+
+    <%- include('../partials/_navbar.ejs') %>
+
+    <h1>WELCOME TO MOVIESYNC</h1>
+
+    <a href="/users/<%=user._id%>/movies/list">
+        <button type="button">My List</button>
+    </a>
+
+    <a href="/users/<%=user._id%>/movies/new">
+        <button type="button">Add New</button>
+    </a>
+
+
+</body>
+</html>

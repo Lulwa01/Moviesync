@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a new Movie</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add to <%= user.username %>'s watchlist</h1>
+
+    <form action="/users/<%= user._id %>/movies" method="POST">
+        <label for="name">Movie Title</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="genre">Genre</label>
+        <input type="text" name="genre" id="genre" />
+
+        <label for="review">Review</label>
+        <textarea name="review" id="review"></textarea>
+
+        <label for="recommendation">Recommendation</label>
+        <select id="recommendation" name="recommendation">
+            <option value="recommended">Recommended</option>
+            <option value="not-recommended">Not Recommended</option>
+        </select>
+
+        <button type="submit">Add</button>
+    </form>
+
+    <a href="/users/<%=user._id%>/movies">
+        <button type="button">Go Back</button>
+    </a>
+    
+</html>

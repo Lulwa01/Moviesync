@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= movie.name %></title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= movie.name %></h1>
+
+    <% if (movie.genre) { %>
+        <p><%= movie.genre %></p>
+    <% } %>
+
+    <% if (movie.review) { %>
+        <p>Review: <%= movie.review %></p>
+    <% } %>
+
+    <p><%= movie.recommendation %></p>
+
+    <form action="/users/<%= user._id %>/movies/<%= movie._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+
+    <form action="/users/<%= user._id %>/movies/<%= movie._id %>/edit">
+        <button type="submit">Edit</button>
+    </form>
+    </form>
+
+    <a href="/users/<%=user._id%>/movies/list">
+        <button type="button">Go Back</button>
+    </a>
+
+</body>
+</html>

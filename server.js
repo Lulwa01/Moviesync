@@ -1,17 +1,20 @@
+require('dotenv').config();
+require('./config/database');
 const express = require('express');
+
+const app = express();
 const methodOverride = require('method-override');
 const morgan = require('morgan');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const addUserToViews = require('./middleware/addUserToViews');
-require('dotenv').config();
-require('./config/database');
+const isSignedIn = require('./middleware/isSignedIn');
 
 // Controllers
 const authController = require('./controllers/auth');
-const isSignedIn = require('./middleware/isSignedIn');
+const moviesController = require('./controllers/movies')
 
-const app = express();
+
 // Set the port from environment variable or default to 3000
 const port = process.env.PORT ? process.env.PORT : '3000';
 
@@ -37,14 +40,19 @@ app.use(
 app.use(addUserToViews);
 
 // Public Routes
-app.get('/', async (req, res) => {
-  res.render('index.ejs');
-});
+app.get('/', (req, res) => {
+  if(req.session.user) {
+    res.redirect(`/users/${req.session.user._id}/movies`)
+  } else {
+    res.render('index.ejs')
+  }
+})
 
 app.use('/auth', authController);
 
 // Protected Routes
 app.use(isSignedIn);
+
 
 app.get('/protected', async (req, res) => {
   if (req.session.user) {
@@ -54,6 +62,8 @@ app.get('/protected', async (req, res) => {
     // res.send('Sorry, no guests allowed.');
   }
 });
+
+app.use('/users/:userId/movies', moviesController);
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console
