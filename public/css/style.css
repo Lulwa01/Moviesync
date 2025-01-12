@@ -1,0 +1,23 @@
+body {
+    justify-content: center;
+    background-color: #d5abab;
+    font-family: 'Made Tommy', sans-serif;
+}
+
+#auth {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+    text-align: center;
+}
+
+#app-name {
+    color: #FF7300;
+    font-size: 40px;
+}
+
+#app-slogan {
+    color: white;
+}

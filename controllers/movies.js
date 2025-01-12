@@ -83,9 +83,11 @@ router.put('/:movieId', async (req, res) => {
         const currentUser = await User.findById(req.session.user._id)
         const movie = currentUser.movies.id(req.params.movieId)
         movie.set(req.body)
+        console.log(req.body)
         await currentUser.save()
         res.redirect(`/users/${currentUser._id}/movies/${req.params.movieId}`)
     } catch (error) {
+        console.log(error)
         res.redirect('/')
     }
 })

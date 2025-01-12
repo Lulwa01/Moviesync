@@ -7,6 +7,7 @@ const movieSchema = new mongoose.Schema({
   },
   genre: {
     type: String,
+    enum: ['fantasy', 'romance', 'mystery', 'horror', 'comedy', 'action', 'crime', 'adventure', 'science-fiction', 'fiction', 'musical', 'animation', 'other'],
     required: true,
   },
   review: {
@@ -31,5 +32,6 @@ const userSchema = new mongoose.Schema({
   movies: [movieSchema],
 });
 
-module.exports = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
+module.exports = User;

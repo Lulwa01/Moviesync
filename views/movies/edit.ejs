@@ -8,12 +8,82 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
 
-    <form action="/users/<%= user._id %>/movies/<%= movie._id %>?method=PUT" method="POST">
+    <form action="/users/<%= user._id %>/movies/<%= movie._id %>?_method=PUT" method="POST">
         <label for="name">Movie Title</label>
         <input type="text" name="name" id="name" value="<%= movie.name %>"/>
 
         <label for="genre">Genre</label>
-        <input type="text" name="genre" id="genre" value="<%= movie.genre %>"/>
+        <select id="genre" name="genre">
+            <option value="fantasy" <%= movie.genre === "fantasy" ? "selected" : "" %>
+                >
+                fantasy
+            </option>
+
+            <option value="romance" <%= movie.genre === "romance" ? "selected" : "" %>
+                >
+                romance
+            </option>
+
+            <option value="mystery" <%= movie.genre === "mystery" ? "selected" : "" %>
+                >
+                mystery
+            </option>
+
+            <option value="horror" <%= movie.genre === "horror" ? "selected" : "" %>
+                >
+                horror
+            </option>
+
+            <option value="horror" <%= movie.genre === "horror" ? "selected" : "" %>
+                >
+                horror
+            </option>
+
+            <option value="comedy" <%= movie.genre === "comedy" ? "selected" : "" %>
+                >
+                comedy
+            </option>
+
+            <option value="action" <%= movie.genre === "action" ? "selected" : "" %>
+                >
+                action
+            </option>
+
+            <option value="crime" <%= movie.genre === "crime" ? "selected" : "" %>
+                >
+                crime
+            </option>
+
+            <option value="adventure" <%= movie.genre === "adventure" ? "selected" : "" %>
+                >
+                adventure
+            </option>
+
+            <option value="science-fiction" <%= movie.genre === "science-fiction" ? "selected" : "" %>
+                >
+                science-fiction
+            </option>
+
+            <option value="fiction" <%= movie.genre === "fiction" ? "selected" : "" %>
+                >
+                fiction
+            </option>
+
+            <option value="musical" <%= movie.genre === "musical" ? "selected" : "" %>
+                >
+                musical
+            </option>
+
+            <option value="animation" <%= movie.genre === "animation" ? "selected" : "" %>
+                >
+                animation
+            </option>
+
+            <option value="other" <%= movie.genre === "other" ? "selected" : "" %>
+                >
+                other
+            </option>
+        </select>
 
         <label for="review">Review</label>
         <textarea name="review" id="review"><%= movie.review %></textarea>

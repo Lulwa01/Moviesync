@@ -22,6 +22,9 @@ const port = process.env.PORT ? process.env.PORT : '3000';
 
 // Middleware to parse URL-encoded data from forms
 app.use(express.urlencoded({ extended: false }));
+// In your express app, you have to mention the public directory from which you are serving the static files
+app.use(express.static(__dirname + '/public'));
+
 // Middleware for using HTTP verbs such as PUT or DELETE
 app.use(methodOverride('_method'));
 // Morgan for logging HTTP requests
