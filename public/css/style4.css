@@ -1,0 +1,14 @@
+/* VIEWS/MOVIES/NEW : ADD MOVIE PAGE */
+
+body {
+    background-color: #000000;
+    font-family: 'Made Tommy', sans-serif;
+    color: #ffffff;
+}
+
+#elements-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    margin-top: 45px;
+}

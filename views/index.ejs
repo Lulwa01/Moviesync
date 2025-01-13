@@ -11,13 +11,40 @@
   <body>
     
     <div id="auth">
-      <img id="auth-bg" src="/css/images/sign-in-bg.png" alt="Movie Posters">
+      <img id="auth-bg" src="/css/sign-in-bg2.png" alt="movies posters">
+      <div class="morphsim"></div>
+      
   
       <h1 id="app-name">MovieSync</h1>
       <p id="app-slogan">Your Gateway to Seamless Movie Tracking!</p>
-      <a href="/auth/sign-up">Sign up</a>
-      <a href="/auth/sign-in">Sign in</a>
+
+      <div class="glass-container">
+        <div class="glass-card">
+
+      <form action="/auth/sign-in" method="POST">
+      
+        <div class="username-container">
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" />
+        </div>
+
+        <div class="password-container">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" />
+        </div>
+
+        <div class="button-container">
+          <button type="submit">Sign in</button>
+        </div>
+      </form>
+        <div class="sign-up-container">
+          <a href="/auth/sign-up">New user? Register</a>
+        </div>
+
+      </div>
+    
 
     </div>
+
   </body>
 </html>

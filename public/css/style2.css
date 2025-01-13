@@ -1,0 +1,80 @@
+/* VIEWS/MOVIES/INDEX : WELCOME PAGE */
+
+body {
+    background-color: #000000;
+    font-family: 'Made Tommy', sans-serif;
+    color: #000000;
+}
+
+#home-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    object-fit: cover;
+    z-index: -1;
+}
+
+#elements-container {
+    margin-left: 75px;
+    margin-top: 45px;
+}
+
+.welcome-note {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: -25px;
+    padding: 0%;
+}
+
+#list-button {
+    background: #FF7300;
+    border-radius: 50px;
+    color: white;
+    width: fit-content;
+    border: none;
+    width: 120px;
+    height: 45px;
+    font-size: 18px;
+    font-family: 'Made Tommy', sans-serif;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+#list-button:hover {
+    cursor: pointer;
+    background-color: #FF7300; 
+    opacity: 50%;
+    color: white;
+}
+
+#add-button {
+    background: white;
+    border-radius: 50px;
+    color: #FF7300;
+    width: fit-content;
+    border: none;
+    width: 120px;
+    height: 45px;
+    font-size: 18px;
+    font-family: 'Made Tommy', sans-serif;
+}
+
+#add-button:hover {
+    cursor: pointer;
+    background-color: white; 
+    opacity: 50%;
+    color: #FF7300;
+}
+

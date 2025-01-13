@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My List</title>
+    <link href="/css/style3.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <%- include('../partials/_navbar.ejs') %>
-    <h1><%= user.username %>'s watchlist</h1>
 
+  <img id="list-bg" src="/css/brave-movie.png" alt="movie image">
+
+    <%- include('../partials/_navbar.ejs') %>
+
+    <div id="elements-container">
+
+      <a href="/users/<%=user._id%>/movies">
+        <button id="back-button" type="button"></button>
+    </a>
+
+    <h1 id="list-title"><%= user.username %>'s <br>watchlist</br></h1>
+
+  <div id="movies">
     <ul>
         <% movies.forEach((movie)=>{ %>
         <li>
@@ -19,12 +31,12 @@
         <% }) %>
       </ul>
 
+    </div>
+
     <a href="/users/<%=user._id%>/movies/new">
-        <button type="button">Add New</button>
+        <button id="add-button" type="button"></button>
     </a>
 
-    <a href="/users/<%=user._id%>/movies">
-        <button type="button">Go Back</button>
-    </a>
+  </div>
 </body>
 </html>

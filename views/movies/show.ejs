@@ -3,13 +3,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= movie.name %></title>
+    <link href="/css/style5.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
+    <img id="movie-details-bg" src="/css/movie-details-bg.png" alt="movie image">
+
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= movie.name %></h1>
+
+    <div id="elements-container">
+    <h1 id="movie-name"><%= movie.name %></h1>
 
     <% if (movie.genre) { %>
-        <p><%= movie.genre %></p>
+        <p id="movie-genre"><%= movie.genre %></p>
     <% } %>
 
     <% if (movie.review) { %>
@@ -30,6 +36,6 @@
     <a href="/users/<%=user._id%>/movies/list">
         <button type="button">Go Back</button>
     </a>
-
+</div>
 </body>
 </html>
