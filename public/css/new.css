@@ -1,0 +1,114 @@
+/* VIEWS/MOVIES/NEW : ADD MOVIE PAGE */
+
+body {
+    background-color: #000000;
+    font-family: 'Made Tommy', sans-serif;
+    color: #ffffff;
+}
+
+#movie-details-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    object-fit: cover;
+    z-index: -1;
+}
+
+#elements-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    margin-top: 45px;
+}
+
+
+#back-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: white;
+    opacity: 22%;
+    border-radius: 50px;
+    margin-top: 15px;
+    z-index: 1000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 47px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 5px;
+}
+
+input, 
+textarea, 
+select {
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    max-width: 500px;
+    /* margin-bottom: 20px; */
+}
+
+input:hover,
+textarea:hover {
+    border: 1px solid #FF7300;
+}
+
+select {
+    padding-right: 30px;
+    font-weight: 100;
+    color: #d3d2d2;
+    padding-left: 12px 16px;
+    max-width: 520px;
+}
+
+select:hover {
+    border: 1px solid #FF7300;
+    color: #FF7300;
+}
+
+textarea {
+    min-height: 90px;
+}
+
+#movie-title {
+    margin-bottom: -25px;
+    margin-top: 0;
+}
+
+#genre {
+    margin-top: 5px;
+    margin-bottom: -25px;
+}
+
+#review {
+    margin-top: 30px;
+    margin-bottom: -50px;
+}
+
+#submit-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: white;
+    opacity: 22%;
+    border-radius: 50px;
+    margin-top: 110px;
+}

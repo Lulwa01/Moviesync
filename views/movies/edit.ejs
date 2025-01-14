@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit <%= movie.name %></title>
+    <link href="/css/edit.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
 
+    <img id="movie-details-bg" src="/css/images/movie-details-bg.png" alt="movie image">
+
+    <div id="elements-container">
+
+    <a href="/users/<%= user._id %>/movies/<%= movie._id %>">
+        <button id="back-button" type="button">Go Back</button>
+    </a>
+
     <form action="/users/<%= user._id %>/movies/<%= movie._id %>?_method=PUT" method="POST">
-        <label for="name">Movie Title</label>
+        <label for="name" id="movie-title">Movie Title</label>
         <input type="text" name="name" id="name" value="<%= movie.name %>"/>
 
-        <label for="genre">Genre</label>
+        <label for="genre" id="genre">Genre</label>
         <select id="genre" name="genre">
             <option value="fantasy" <%= movie.genre === "fantasy" ? "selected" : "" %>
                 >
@@ -85,27 +95,13 @@
             </option>
         </select>
 
-        <label for="review">Review</label>
+        <label for="review" id="review">Review</label>
         <textarea name="review" id="review"><%= movie.review %></textarea>
 
-        <label for="recommendation">Recommendation</label>
-        <select id="recommendation" name="recommendation">
-            <option value="recommended" <%= movie.recommendation === "recommended" ? "selected" : "" %>
-                >
-                Recommended
-            </option>
-
-            <option value="not-recommended" <%= movie.recommendation === "not-recommended" ? "selected" : "" %>
-                >
-                Not recommended
-            </option>
-        </select>
-
-        <button type="submit">Edit</button>
+        
+        <button id="submit-button" type="submit">
+            <img id="edit-button-image" src="/css/images/edit-button-image.png" alt="edit button icon">
+        </button>
     </form>
-
-    <a href="/users/<%= user._id %>/movies/<%= movie._id %>">
-        <button type="button">Go Back</button>
-    </a>
-    
+</div>
 </html>

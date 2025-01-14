@@ -13,10 +13,10 @@ const movieSchema = new mongoose.Schema({
   review: {
     type: String,
   },
-  recommendation: {
-    type: String,
-    enum: ['recommended', 'not recommended']
-  },
+  // recommendation: {
+  //   type: String,
+  //   enum: ['recommended', 'not recommended']
+  // },
 })
 
 const userSchema = new mongoose.Schema({

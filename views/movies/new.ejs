@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a new Movie</title>
-    <link href="/css/style4.css" rel="stylesheet" type="text/css">
+    <link href="/css/new.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
 
+    <img id="movie-details-bg" src="/css/images/movie-details-bg.png" alt="movie image">
+
+
     <div id="elements-container">
 
+
+        <a href="/users/<%=user._id%>/movies">
+            <button id="back-button" type="button">Go Back</button>
+        </a>
+        
     <form action="/users/<%= user._id %>/movies" method="POST">
-        <label for="name">Movie Title</label>
+        <label for="name" id="movie-title">Movie Title</label>
         <input type="text" name="name" id="name" />
 
-        <label for="genre">Genre</label>
+        <label for="genre" id="genre">Genre</label>
         <select id="genre" name="genre">
             <option value="fantasy">fantasy</option>
             <option value="romance">romance</option>
@@ -32,21 +40,12 @@
             <option value="other">other</option>
         </select>
 
-        <label for="review">Review</label>
+        <label for="review" id="review">Review</label>
         <textarea name="review" id="review"></textarea>
 
-        <label for="recommendation">Recommendation</label>
-        <select id="recommendation" name="recommendation">
-            <option value="recommended">Recommended</option>
-            <option value="not-recommended">Not Recommended</option>
-        </select>
-
-            <button type="submit">Add</button>
+            <button id="submit-button" type="submit">Add</button>
     </form>
 
-    <a href="/users/<%=user._id%>/movies">
-        <button type="button">Go Back</button>
-    </a>
 </div>
     
 </html>

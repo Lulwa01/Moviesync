@@ -21,6 +21,10 @@ body {
     z-index: -1;
 }
 
+nav {
+    color: #FF7300;
+}
+
 #auth {
     display: flex;
     justify-content: center;

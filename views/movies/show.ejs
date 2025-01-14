@@ -3,15 +3,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= movie.name %></title>
-    <link href="/css/style5.css" rel="stylesheet" type="text/css">
+    <link href="/css/show.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-    <img id="movie-details-bg" src="/css/movie-details-bg.png" alt="movie image">
+    <img id="movie-details-bg" src="/css/images/movie-details-bg.png" alt="movie image">
 
     <%- include('../partials/_navbar.ejs') %>
 
     <div id="elements-container">
+
+        <a href="/users/<%=user._id%>/movies/list">
+            <img id="back-button-image" src="/css/images/back-button.png" alt="back button">
+        </a>
+
     <h1 id="movie-name"><%= movie.name %></h1>
 
     <% if (movie.genre) { %>
@@ -19,23 +24,24 @@
     <% } %>
 
     <% if (movie.review) { %>
-        <p>Review: <%= movie.review %></p>
+        <p id="movie-review">Review</p>
+        <p id="movie-review-details"><%= movie.review %></p>
     <% } %>
 
-    <p><%= movie.recommendation %></p>
-
+  <div id="action-buttons">
+      <form action="/users/<%= user._id %>/movies/<%= movie._id %>/edit">
+          <button id="edit-button" type="submit">
+              <img id="edit-button-image" src="/css/images/edit-button-image.png" alt="edit button icon">
+        </button>
+      </form>
+      
     <form action="/users/<%= user._id %>/movies/<%= movie._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
+        <img id="delete-button-image" src="/css/images/delete-button-image.png" alt="delete button icon">
     </form>
 
-    <form action="/users/<%= user._id %>/movies/<%= movie._id %>/edit">
-        <button type="submit">Edit</button>
-    </form>
-    </form>
+  </div>
 
-    <a href="/users/<%=user._id%>/movies/list">
-        <button type="button">Go Back</button>
-    </a>
+
 </div>
 </body>
 </html>

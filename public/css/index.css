@@ -6,6 +6,10 @@ body {
     color: #000000;
 }
 
+nav {
+    color: wheat;
+}
+
 #home-bg {
     position: fixed;
     top: 0;

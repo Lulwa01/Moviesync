@@ -1,0 +1,92 @@
+/* VIEWS/MOVIES/LIST : WATCHLIST PAGE */
+
+body {
+    background-color: #c59090;
+    font-family: 'Made Tommy', sans-serif;
+    color: #ffffff;
+}
+
+#list-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+#elements-container {
+    margin-left: 75px;
+    margin-top: 45px;
+}
+
+#back-button-image {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#list-title {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 50px;
+    /* line-height: 50px; */
+}
+
+#add-button-image {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    margin-top: 100px;
+}
+
+#movies a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#movies a:hover {
+    color: #FF7300;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#checkbox  {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    appearance: none;
+    border: 2px solid #FF7300;
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: -50px;
+}
+
+#checkbox:checked {
+    background-color: #FF7300;
+    border: none;
+}
+
