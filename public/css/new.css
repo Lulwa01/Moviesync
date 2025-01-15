@@ -59,7 +59,6 @@ select {
     margin-top: 10px;
     max-width: 500px;
     font-family: 'Made Tommy', sans-serif;
-    /* margin-bottom: 20px; */
 }
 
 input:hover,
@@ -104,8 +103,6 @@ textarea {
     height: 50px;
     background-color: #000000;
     border: none;
-    /* opacity: 22%; */
-    /* border-radius: 50px; */
     margin-top: 100px;
 }
 
