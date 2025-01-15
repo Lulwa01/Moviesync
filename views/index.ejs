@@ -7,29 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MovieSync</title>
     <link href="/css/signin.css" rel="stylesheet" type="text/css">
+    <link href="/css/navbar.css" rel="stylesheet">
   </head>
   <body>
     
+    <img id="auth-bg" src="/css/images/sign-in-bg.png" alt="movies posters">
+
     <div id="auth">
-      <img id="auth-bg" src="/css/images/sign-in-bg2.png" alt="movies posters">
-      <div class="morphsim"></div>
       
   
       <h1 id="app-name">MovieSync</h1>
       <p id="app-slogan">Your Gateway to Seamless Movie Tracking!</p>
 
-      <div class="glass-container">
-        <div class="glass-card">
-
       <form action="/auth/sign-in" method="POST">
       
+      <div id="form-container">
         <div class="username-container">
-          <label for="username">Username:</label>
+          <label for="username">Username</label>
           <input type="text" name="username" id="username" />
         </div>
 
         <div class="password-container">
-          <label for="password">Password:</label>
+          <label for="password">Password</label>
           <input type="password" name="password" id="password" />
         </div>
 
@@ -42,9 +41,7 @@
         </div>
 
       </div>
-    
-
     </div>
-
+    
   </body>
 </html>

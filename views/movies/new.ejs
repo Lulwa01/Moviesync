@@ -16,7 +16,7 @@
 
 
         <a href="/users/<%=user._id%>/movies">
-            <button id="back-button" type="button">Go Back</button>
+            <img id="back-button-image" src="/css/images/back-button.png" alt="back button">
         </a>
         
     <form action="/users/<%= user._id %>/movies" method="POST">
@@ -29,6 +29,7 @@
             <option value="romance">romance</option>
             <option value="mystery">mystery</option>
             <option value="horror">horror</option>
+            <option value="drama">drama</option>
             <option value="comedy">comedy</option>
             <option value="action">action</option>
             <option value="crime">crime</option>
@@ -43,7 +44,9 @@
         <label for="review" id="review">Review</label>
         <textarea name="review" id="review"></textarea>
 
-            <button id="submit-button" type="submit">Add</button>
+        <button id="submit-button" type="submit">
+            <img id="tick-button-image" src="/css/images/tick-button-image.png" alt="tick button icon">
+        </button>
     </form>
 
 </div>

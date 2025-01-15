@@ -18,23 +18,18 @@ body {
     z-index: -1;
 }
 
+#back-button-image {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
 #elements-container {
     display: flex;
     flex-direction: column;
     margin-left: 75px;
     margin-top: 45px;
-}
-
-
-#back-button {
-    width: 50px;
-    height: 50px;
-    border: none;
-    background-color: white;
-    opacity: 22%;
-    border-radius: 50px;
-    margin-top: 15px;
-    z-index: 1000;
 }
 
 form {
@@ -63,6 +58,7 @@ select {
     padding: 10px;
     margin-top: 10px;
     max-width: 500px;
+    font-family: 'Made Tommy', sans-serif;
     /* margin-bottom: 20px; */
 }
 
@@ -106,9 +102,18 @@ textarea {
 #submit-button {
     width: 50px;
     height: 50px;
+    background-color: #000000;
     border: none;
-    background-color: white;
-    opacity: 22%;
-    border-radius: 50px;
-    margin-top: 110px;
+    /* opacity: 22%; */
+    /* border-radius: 50px; */
+    margin-top: 100px;
+}
+
+#tick-button-image {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    bottom: 60px;
 }

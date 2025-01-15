@@ -1,0 +1,129 @@
+/* VIEWS/INDEX : SIGN UP PAGE */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    font-family: 'Made Tommy', sans-serif;
+}
+
+#auth-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    object-fit: cover;
+    z-index: -1;
+}
+
+#auth {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+  
+
+#message {
+    color: #FF7300;
+    font-size: 30px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    width: 100%;
+    max-width: 330px;
+    margin-top: 40px;
+}
+
+.username-container input,
+.password-container input,
+.confirm-password-container input {
+    width: 90%; 
+    padding: 17px; 
+    font-size: 16px; 
+    border: 2px;
+    border-color: white;
+    border-radius: 8px;
+    background-color: white; 
+    opacity: 20%;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.username-container input::placeholder,
+.password-container input::placeholder,
+.confirm-password-container input::placeholder {
+    color: white; 
+    opacity: 1;
+}
+
+.username-container label,
+.password-container label,
+.confirm-password-container label {
+    font-size: 16px; 
+    color: white; 
+    width: 100%;
+    text-align: left;
+}
+
+.username-container {
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.password-container {
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.button-container {
+    margin-top: 35px;
+    width: 100%;
+}
+
+.button-container button {
+    width: 100%; 
+    padding: 17px; 
+    font-size: 16px; 
+    border: none;
+    border-radius: 8px; 
+    background-color: #FF7300; 
+    color: white; 
+    transition: background-color 0.3s, color 0.3s; 
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #FF7300; 
+    opacity: 50%; 
+    color: white;
+}
+
+.sign-up-container {
+    margin-top: 10px;
+}
+
+.sign-up-container a {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sign-up-container a:hover {
+    color: #FF7300;
+}

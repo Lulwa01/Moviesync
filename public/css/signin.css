@@ -6,7 +6,6 @@ body {
     align-items: center;
     background-color: #000000;
     font-family: 'Made Tommy', sans-serif;
-    margin: 0;
 }
 
 #auth-bg {
@@ -21,18 +20,14 @@ body {
     z-index: -1;
 }
 
-nav {
-    color: #FF7300;
-}
-
 #auth {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-content: center;
-    margin: auto;
+    /* margin: auto; */
     align-items: center;
-    margin-top: 40px;
+    /* margin-top: 20px; */
     /* text-align: center; */
 }
   
@@ -60,28 +55,27 @@ nav {
     position: relative;
     width: 100%;
     max-width: 330px;
-    margin-top: 20px;
-}
-
-.username-container,
-.password-container {
-    align-items: flex-start; 
-    width: 100%;
-    margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 .username-container input,
 .password-container input {
-    width: 100%; 
+    width: 90%; 
     padding: 17px; 
     font-size: 16px; 
     border: 2px;
     border-color: white;
     border-radius: 8px;
-    /* background-color: transparent;  */
-    fill: none;
-    color: black;
-    outline: none;
+    background-color: white; 
+    opacity: 20%;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.username-container input::placeholder,
+.password-container input::placeholder {
+    color: white; 
+    opacity: 1;
 }
 
 .username-container label,
@@ -93,22 +87,24 @@ nav {
 }
 
 .username-container {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    align-items: center;
+
 }
 
 .button-container {
-    margin-top: 30px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .button-container button {
-    width: 111%; 
+    width: 100%; 
     padding: 17px; 
     font-size: 16px; 
     border: none;
     border-radius: 8px; 
     background-color: #FF7300; 
     color: white; 
-    transition: background-color 0.3s, color 0.3s; 
     cursor: pointer;
 }
 
@@ -119,13 +115,18 @@ nav {
 }
 
 .sign-up-container {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .sign-up-container a {
+    margin-top: 10px;
     font-size: 14px;
     font-weight: 100;
     color: white;
     text-decoration: none;
-    transition: color 0.3;
+    text-align: center;
+}
+
+.sign-up-container a:hover {
+    color: #FF7300;
 }

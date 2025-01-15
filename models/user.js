@@ -7,16 +7,12 @@ const movieSchema = new mongoose.Schema({
   },
   genre: {
     type: String,
-    enum: ['fantasy', 'romance', 'mystery', 'horror', 'comedy', 'action', 'crime', 'adventure', 'science-fiction', 'fiction', 'musical', 'animation', 'other'],
+    enum: ['fantasy', 'romance', 'mystery', 'drama', 'horror', 'comedy', 'action', 'crime', 'adventure', 'science-fiction', 'fiction', 'musical', 'animation', 'other'],
     required: true,
   },
   review: {
     type: String,
   },
-  // recommendation: {
-  //   type: String,
-  //   enum: ['recommended', 'not recommended']
-  // },
 })
 
 const userSchema = new mongoose.Schema({

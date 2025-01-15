@@ -1,10 +1,9 @@
-
-  <nav>
-      <% if(user) { %>
-      <!-- <a href="/users/<%= user._id %>/movies">Your Apps</a> -->
-      <a href="/auth/sign-out">Sign Out</a>
-      <% } else { %>
-      <a href="/auth/sign-in">Sign In</a>
-      <a href="/auth/sign-up">Sign Up</a>
-      <% } %>
+<nav style="margin-top: 30px; margin-left: 74px;">
+    <% if(user) { %>
+    <!-- <a href="/users/<%= user._id %>/movies">Your Apps</a> -->
+    <a href="/auth/sign-out" style="color: white; text-decoration: none;">Sign Out</a>
+    <% } else { %>
+      <a href="/auth/sign-in" style="color: white; text-decoration: none;">Sign In</a>
+      <a href="/auth/sign-up" style="color: white; text-decoration: none;">Sign Up</a>
+    <% } %>
     </nav>

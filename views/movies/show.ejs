@@ -36,7 +36,9 @@
       </form>
       
     <form action="/users/<%= user._id %>/movies/<%= movie._id %>?_method=DELETE" method="POST">
-        <img id="delete-button-image" src="/css/images/delete-button-image.png" alt="delete button icon">
+        <button id="delete-button" type="submit">
+            <img id="delete-button-image" src="/css/images/delete-button-image.png" alt="delete button icon">
+        </button>
     </form>
 
   </div>
